@@ -1,21 +1,497 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Piyush's Website</title>
-  <style>
-    body { font-family: Arial, sans-serif; text-align: center; padding: 50px; background: #f0f4f8; color: #333; }
-    h1 { color: #2c3e50; }
-    .container { max-width: 800px; margin: auto; }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vietnam Family Escape • Da Nang & Hoi An 2026</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Inter:wght@400;500;600&display=swap');
+        
+        :root {
+            --primary: #e11d48;
+        }
+        
+        .hero-bg {
+            background-image: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('https://picsum.photos/id/1015/2000/1200');
+            background-size: cover;
+            background-position: center;
+        }
+        
+        .nav-link {
+            transition: all 0.3s;
+        }
+        
+        .nav-link:hover {
+            color: #e11d48;
+            transform: translateY(-2px);
+        }
+        
+        .day-card {
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        
+        .day-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
+        }
+        
+        .tail {
+            font-family: 'Playfair Display', serif;
+        }
+    </style>
 </head>
-<body>
-  <div class="container">
-    <h1>Welcome to My Website!</h1>
-    <p>I'm Piyush from New Delhi. This site is hosted for free on GitHub Pages.</p>
-    <p>Created on February 15, 2026 🚀</p>
-    <p><a href="https://github.com/piyush">My GitHub Profile</a></p>
-  </div>
+<body class="bg-stone-50 font-sans">
+
+    <!-- NAVBAR -->
+    <nav class="bg-white shadow-sm sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
+            <div class="flex items-center gap-3">
+                <div class="w-10 h-10 bg-rose-600 rounded-2xl flex items-center justify-center text-white text-2xl">🇻🇳</div>
+                <div>
+                    <span class="tail text-2xl font-bold tracking-tight text-stone-900">Vietnam Family Escape</span>
+                </div>
+            </div>
+            <div class="hidden md:flex items-center gap-8 text-sm font-medium text-stone-600">
+                <a href="#overview" class="nav-link">Overview</a>
+                <a href="#itinerary" class="nav-link">Itinerary</a>
+                <a href="#hotels" class="nav-link">Hotels</a>
+                <a href="#flights" class="nav-link">Flights</a>
+                <a href="#budget" class="nav-link">Budget</a>
+                <a href="#tips" class="nav-link">Tips</a>
+            </div>
+            <a href="#book" 
+               class="bg-rose-600 hover:bg-rose-700 text-white px-6 py-3 rounded-2xl font-semibold text-sm flex items-center gap-2 transition-all">
+                <i class="fa-solid fa-plane"></i>
+                BOOK NOW
+            </a>
+        </div>
+    </nav>
+
+    <!-- HERO -->
+    <header class="hero-bg h-screen flex items-center text-white">
+        <div class="max-w-5xl mx-auto px-6 text-center">
+            <div class="inline-flex items-center gap-2 bg-white/20 backdrop-blur-md px-6 py-2 rounded-full mb-6">
+                <span class="text-xs tracking-widest font-mono">6 DAYS • 2 ADULTS + INFANT + 3YO</span>
+            </div>
+            <h1 class="text-6xl md:text-7xl font-bold tail leading-none mb-6">Da Nang & Hoi An<br>Family Adventure</h1>
+            <p class="text-xl md:text-2xl max-w-lg mx-auto opacity-90 mb-10">Peaceful beaches, magical lanterns, and zero stress for the little ones</p>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                <a href="#itinerary" 
+                   class="bg-white text-stone-900 px-10 py-4 rounded-3xl font-semibold flex items-center justify-center gap-3 hover:bg-amber-100 transition-all">
+                    <i class="fa-solid fa-calendar-days"></i>
+                    SEE THE ITINERARY
+                </a>
+                <a href="#hotels" 
+                   class="border-2 border-white hover:bg-white hover:text-stone-900 px-10 py-4 rounded-3xl font-semibold transition-all">
+                    EXPLORE HOTELS
+                </a>
+            </div>
+            <div class="mt-16 flex justify-center gap-8 text-sm">
+                <div class="text-center">
+                    <div class="text-4xl">🌴</div>
+                    <div class="mt-1 text-xs tracking-widest">BEACHES</div>
+                </div>
+                <div class="text-center">
+                    <div class="text-4xl">🏮</div>
+                    <div class="mt-1 text-xs tracking-widest">LANTERNS</div>
+                </div>
+                <div class="text-center">
+                    <div class="text-4xl">🚂</div>
+                    <div class="mt-1 text-xs tracking-widest">CABLE CARS</div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- OVERVIEW -->
+    <section id="overview" class="py-20 bg-white">
+        <div class="max-w-6xl mx-auto px-6">
+            <div class="grid md:grid-cols-12 gap-12 items-center">
+                <div class="md:col-span-5">
+                    <div class="sticky top-24">
+                        <span class="inline-block px-4 py-2 bg-rose-100 text-rose-600 rounded-full text-sm font-semibold mb-4">PERFECT FOR FAMILIES WITH BABIES & TODDLERS</span>
+                        <h2 class="text-5xl tail font-bold leading-tight mb-6">6 Relaxed Days in Central Vietnam</h2>
+                        <p class="text-lg text-stone-600 leading-relaxed">Minimal moving. Maximum beach time. Hotels with cribs, kids' pools, and babysitting. Private transfers everywhere.</p>
+                        
+                        <div class="mt-10 grid grid-cols-3 gap-6 text-center">
+                            <div>
+                                <div class="text-3xl font-semibold">2</div>
+                                <div class="text-xs uppercase tracking-widest text-stone-500">Adults</div>
+                            </div>
+                            <div>
+                                <div class="text-3xl font-semibold">1</div>
+                                <div class="text-xs uppercase tracking-widest text-stone-500">Infant</div>
+                            </div>
+                            <div>
+                                <div class="text-3xl font-semibold">1</div>
+                                <div class="text-xs uppercase tracking-widest text-stone-500">3-year-old</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="md:col-span-7">
+                    <div class="bg-stone-100 rounded-3xl p-2">
+                        <img src="https://picsum.photos/id/1015/1200/800" 
+                             alt="Da Nang family beach" 
+                             class="rounded-3xl w-full">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ITINERARY -->
+    <section id="itinerary" class="py-20 bg-stone-50">
+        <div class="max-w-6xl mx-auto px-6">
+            <div class="text-center mb-12">
+                <span class="text-rose-600 font-semibold text-sm tracking-widest">DAY BY DAY</span>
+                <h2 class="text-5xl tail font-bold">Your Stress-Free Schedule</h2>
+            </div>
+            
+            <div class="space-y-6">
+                <!-- Day 1 -->
+                <div class="day-card bg-white rounded-3xl overflow-hidden border border-stone-100">
+                    <div class="flex items-center gap-6 p-8">
+                        <div class="w-16 h-16 bg-amber-100 rounded-2xl flex-shrink-0 flex items-center justify-center text-4xl">1</div>
+                        <div class="flex-1">
+                            <div class="flex items-center gap-4">
+                                <span class="font-semibold text-xl">Arrival Day • Da Nang</span>
+                                <span class="bg-emerald-100 text-emerald-700 text-xs px-3 py-1 rounded-full">RELAX</span>
+                            </div>
+                            <p class="text-stone-600 mt-2">Fly into Da Nang → Private transfer to beach resort → Pool & beach time</p>
+                        </div>
+                        <button onclick="toggleDay(this)" 
+                                class="day-btn w-10 h-10 flex items-center justify-center text-2xl text-stone-400 hover:text-rose-600 transition-all">↓</button>
+                    </div>
+                    <div class="day-content hidden px-8 pb-8 border-t">
+                        <div class="grid md:grid-cols-2 gap-8 pt-6">
+                            <div>
+                                <h4 class="font-semibold mb-3 text-stone-800">What you'll do</h4>
+                                <ul class="space-y-4 text-sm">
+                                    <li class="flex gap-3"><span class="text-emerald-500">✓</span> Private airport pickup (car seat available)</li>
+                                    <li class="flex gap-3"><span class="text-emerald-500">✓</span> Check into family suite with crib</li>
+                                    <li class="flex gap-3"><span class="text-emerald-500">✓</span> My Khe Beach playtime (shallow, calm)</li>
+                                    <li class="flex gap-3"><span class="text-emerald-500">✓</span> Hotel kids' dinner & early bedtime</li>
+                                </ul>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold mb-3 text-stone-800">Hotel tonight</h4>
+                                <div class="flex gap-4 items-center">
+                                    <img src="https://picsum.photos/id/870/300/200" class="w-24 h-20 object-cover rounded-2xl">
+                                    <div>
+                                        <div class="font-semibold">Hyatt Regency Danang</div>
+                                        <div class="text-xs text-stone-500">Beachfront • Kids club • Cribs • Babysitting</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Day 2 -->
+                <div class="day-card bg-white rounded-3xl overflow-hidden border border-stone-100">
+                    <div class="flex items-center gap-6 p-8">
+                        <div class="w-16 h-16 bg-amber-100 rounded-2xl flex-shrink-0 flex items-center justify-center text-4xl">2</div>
+                        <div class="flex-1">
+                            <div class="flex items-center gap-4">
+                                <span class="font-semibold text-xl">Da Nang Beach Day</span>
+                                <span class="bg-sky-100 text-sky-700 text-xs px-3 py-1 rounded-full">BEACH</span>
+                            </div>
+                            <p class="text-stone-600 mt-2">Golden Bridge at Ba Na Hills (optional) or pure beach relaxation</p>
+                        </div>
+                        <button onclick="toggleDay(this)" 
+                                class="day-btn w-10 h-10 flex items-center justify-center text-2xl text-stone-400 hover:text-rose-600 transition-all">↓</button>
+                    </div>
+                    <div class="day-content hidden px-8 pb-8 border-t">
+                        <p class="text-stone-600">Morning: Hotel pool & breakfast. Afternoon: Cable car to Ba Na Hills (stroller-friendly paths, fantasy village). Evening: Sunset at the beach.</p>
+                    </div>
+                </div>
+
+                <!-- Day 3 -->
+                <div class="day-card bg-white rounded-3xl overflow-hidden border border-stone-100">
+                    <div class="flex items-center gap-6 p-8">
+                        <div class="w-16 h-16 bg-amber-100 rounded-2xl flex-shrink-0 flex items-center justify-center text-4xl">3</div>
+                        <div class="flex-1">
+                            <div class="flex items-center gap-4">
+                                <span class="font-semibold text-xl">Hoi An Ancient Town</span>
+                                <span class="bg-violet-100 text-violet-700 text-xs px-3 py-1 rounded-full">CULTURE</span>
+                            </div>
+                            <p class="text-stone-600 mt-2">30-min private drive • Lantern magic at dusk</p>
+                        </div>
+                        <button onclick="toggleDay(this)" 
+                                class="day-btn w-10 h-10 flex items-center justify-center text-2xl text-stone-400 hover:text-rose-600 transition-all">↓</button>
+                    </div>
+                    <div class="day-content hidden px-8 pb-8 border-t">
+                        <p class="text-stone-600">Stroll the pedestrian-only old town. Basket boat ride in coconut groves (very calm). Lantern-making workshop for kids.</p>
+                    </div>
+                </div>
+
+                <!-- Day 4 -->
+                <div class="day-card bg-white rounded-3xl overflow-hidden border border-stone-100">
+                    <div class="flex items-center gap-6 p-8">
+                        <div class="w-16 h-16 bg-amber-100 rounded-2xl flex-shrink-0 flex items-center justify-center text-4xl">4</div>
+                        <div class="flex-1">
+                            <div class="flex items-center gap-4">
+                                <span class="font-semibold text-xl">Hoi An Beach & Relax</span>
+                                <span class="bg-teal-100 text-teal-700 text-xs px-3 py-1 rounded-full">CHILL</span>
+                            </div>
+                            <p class="text-stone-600 mt-2">Pool, beach, optional family cooking class</p>
+                        </div>
+                        <button onclick="toggleDay(this)" 
+                                class="day-btn w-10 h-10 flex items-center justify-center text-2xl text-stone-400 hover:text-rose-600 transition-all">↓</button>
+                    </div>
+                </div>
+
+                <!-- Day 5 -->
+                <div class="day-card bg-white rounded-3xl overflow-hidden border border-stone-100">
+                    <div class="flex items-center gap-6 p-8">
+                        <div class="w-16 h-16 bg-amber-100 rounded-2xl flex-shrink-0 flex items-center justify-center text-4xl">5</div>
+                        <div class="flex-1">
+                            <div class="flex items-center gap-4">
+                                <span class="font-semibold text-xl">Free Day or Marble Mountains</span>
+                                <span class="bg-amber-100 text-amber-700 text-xs px-3 py-1 rounded-full">FLEX</span>
+                            </div>
+                            <p class="text-stone-600 mt-2">Whatever the kids need — more beach or gentle adventure</p>
+                        </div>
+                        <button onclick="toggleDay(this)" 
+                                class="day-btn w-10 h-10 flex items-center justify-center text-2xl text-stone-400 hover:text-rose-600 transition-all">↓</button>
+                    </div>
+                </div>
+
+                <!-- Day 6 -->
+                <div class="day-card bg-white rounded-3xl overflow-hidden border border-stone-100">
+                    <div class="flex items-center gap-6 p-8">
+                        <div class="w-16 h-16 bg-amber-100 rounded-2xl flex-shrink-0 flex items-center justify-center text-4xl">6</div>
+                        <div class="flex-1">
+                            <div class="flex items-center gap-4">
+                                <span class="font-semibold text-xl">Departure Day</span>
+                                <span class="bg-rose-100 text-rose-700 text-xs px-3 py-1 rounded-full">HOME</span>
+                            </div>
+                            <p class="text-stone-600 mt-2">Morning beach → Airport transfer</p>
+                        </div>
+                        <button onclick="toggleDay(this)" 
+                                class="day-btn w-10 h-10 flex items-center justify-center text-2xl text-stone-400 hover:text-rose-600 transition-all">↓</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- HOTELS -->
+    <section id="hotels" class="py-20 bg-white">
+        <div class="max-w-6xl mx-auto px-6">
+            <h2 class="text-4xl tail font-bold text-center mb-4">Where You'll Stay</h2>
+            <p class="text-center text-stone-600 max-w-md mx-auto">All hotels confirmed cribs, kids' pools, and family rooms. Kids under 5 usually stay free.</p>
+            
+            <div class="grid md:grid-cols-2 gap-8 mt-12">
+                <!-- Da Nang -->
+                <div class="bg-white border border-stone-100 rounded-3xl overflow-hidden">
+                    <img src="https://picsum.photos/id/870/800/400" class="w-full h-64 object-cover">
+                    <div class="p-8">
+                        <div class="flex justify-between items-start">
+                            <div>
+                                <span class="text-xs bg-rose-100 text-rose-600 px-3 py-1 rounded-full">Days 1-2 &amp; 6</span>
+                                <h3 class="text-2xl font-semibold mt-3">Hyatt Regency Danang Resort &amp; Spa</h3>
+                            </div>
+                            <div class="text-right">
+                                <div class="text-2xl font-bold">₹22,000</div>
+                                <div class="text-xs text-stone-500">per night (family room)</div>
+                            </div>
+                        </div>
+                        <div class="mt-6 text-sm space-y-2">
+                            <div class="flex items-center gap-2"><i class="fa-solid fa-check text-emerald-500"></i> Direct beach access</div>
+                            <div class="flex items-center gap-2"><i class="fa-solid fa-check text-emerald-500"></i> Camp Hyatt kids club (3+)</div>
+                            <div class="flex items-center gap-2"><i class="fa-solid fa-check text-emerald-500"></i> Free crib + high chair</div>
+                        </div>
+                        <a href="https://www.hyatt.com/hyatt-regency-danang" target="_blank"
+                           class="mt-8 block w-full text-center py-4 border-2 border-stone-900 rounded-2xl hover:bg-stone-900 hover:text-white transition-all text-sm font-semibold">
+                            CHECK AVAILABILITY →
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Hoi An -->
+                <div class="bg-white border border-stone-100 rounded-3xl overflow-hidden">
+                    <img src="https://picsum.photos/id/1016/800/400" class="w-full h-64 object-cover">
+                    <div class="p-8">
+                        <div class="flex justify-between items-start">
+                            <div>
+                                <span class="text-xs bg-violet-100 text-violet-600 px-3 py-1 rounded-full">Days 3-5</span>
+                                <h3 class="text-2xl font-semibold mt-3">Four Seasons Resort The Nam Hai, Hoi An</h3>
+                            </div>
+                            <div class="text-right">
+                                <div class="text-2xl font-bold">₹38,000</div>
+                                <div class="text-xs text-stone-500">per night (villa)</div>
+                            </div>
+                        </div>
+                        <div class="mt-6 text-sm space-y-2">
+                            <div class="flex items-center gap-2"><i class="fa-solid fa-check text-emerald-500"></i> Private beach villas</div>
+                            <div class="flex items-center gap-2"><i class="fa-solid fa-check text-emerald-500"></i> Chuon Chuon Kids Club</div>
+                            <div class="flex items-center gap-2"><i class="fa-solid fa-check text-emerald-500"></i> Babysitting on request</div>
+                        </div>
+                        <a href="https://www.fourseasons.com/hoian/" target="_blank"
+                           class="mt-8 block w-full text-center py-4 border-2 border-stone-900 rounded-2xl hover:bg-stone-900 hover:text-white transition-all text-sm font-semibold">
+                            CHECK AVAILABILITY →
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FLIGHTS -->
+    <section id="flights" class="py-20 bg-stone-50">
+        <div class="max-w-6xl mx-auto px-6">
+            <div class="text-center mb-12">
+                <h2 class="text-4xl tail font-bold">Flights from India</h2>
+                <p class="text-stone-600 mt-2">No direct flights. Best routes via Hanoi or Ho Chi Minh City.</p>
+            </div>
+            
+            <div class="bg-white rounded-3xl p-10 max-w-3xl mx-auto">
+                <div class="grid grid-cols-2 gap-12">
+                    <div>
+                        <div class="uppercase text-xs tracking-widest text-stone-500">From Delhi (DEL)</div>
+                        <div class="mt-6 space-y-6">
+                            <div class="flex justify-between items-center border-b pb-6">
+                                <div>
+                                    <div class="font-semibold">VietJet Air / VietNam Airlines</div>
+                                    <div class="text-sm text-stone-500">1 stop • 10-14 hrs</div>
+                                </div>
+                                <div class="text-right">
+                                    <div class="text-2xl font-bold">₹29,000–₹42,000</div>
+                                    <div class="text-xs text-emerald-600">per adult (round trip)</div>
+                                </div>
+                            </div>
+                            <div class="text-xs text-stone-500">Infant: Usually free or ₹2,000–4,000</div>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="uppercase text-xs tracking-widest text-stone-500">Best booking sites</div>
+                        <div class="mt-8 space-y-4">
+                            <a href="https://www.skyscanner.net" target="_blank" 
+                               class="flex items-center gap-4 group">
+                                <div class="w-12 h-12 bg-blue-100 rounded-2xl flex items-center justify-center text-2xl">✈️</div>
+                                <div>
+                                    <div class="font-medium group-hover:underline">Skyscanner</div>
+                                    <div class="text-xs text-stone-500">Best price comparison</div>
+                                </div>
+                            </a>
+                            <a href="https://www.makemytrip.com" target="_blank" 
+                               class="flex items-center gap-4 group">
+                                <div class="w-12 h-12 bg-orange-100 rounded-2xl flex items-center justify-center text-2xl">🛫</div>
+                                <div>
+                                    <div class="font-medium group-hover:underline">MakeMyTrip</div>
+                                    <div class="text-xs text-stone-500">Indian payment options</div>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- BUDGET -->
+    <section id="budget" class="py-20 bg-white">
+        <div class="max-w-6xl mx-auto px-6">
+            <h2 class="text-4xl tail font-bold text-center mb-12">Estimated Total Cost</h2>
+            <div class="max-w-2xl mx-auto bg-stone-50 rounded-3xl p-12">
+                <table class="w-full">
+                    <tr class="border-b">
+                        <td class="py-4 text-stone-600">Flights (2 adults + child)</td>
+                        <td class="text-right font-semibold">₹85,000 – 1,10,000</td>
+                    </tr>
+                    <tr class="border-b">
+                        <td class="py-4 text-stone-600">Hotels (5 nights, family rooms)</td>
+                        <td class="text-right font-semibold">₹1,40,000 – 1,90,000</td>
+                    </tr>
+                    <tr class="border-b">
+                        <td class="py-4 text-stone-600">Private transfers & taxis</td>
+                        <td class="text-right font-semibold">₹18,000</td>
+                    </tr>
+                    <tr class="border-b">
+                        <td class="py-4 text-stone-600">Meals & activities</td>
+                        <td class="text-right font-semibold">₹35,000</td>
+                    </tr>
+                    <tr class="border-b">
+                        <td class="py-4 text-stone-600">Visa (e-visa for Indians)</td>
+                        <td class="text-right font-semibold">₹6,000 (3 people)</td>
+                    </tr>
+                    <tr class="border-t-2 border-stone-900">
+                        <td class="py-6 font-semibold text-lg">TOTAL</td>
+                        <td class="text-right font-bold text-3xl">₹2.9 – 3.8 Lakh</td>
+                    </tr>
+                </table>
+                <p class="text-xs text-center mt-8 text-stone-500">Mid-range luxury. Can go lower with 4-star hotels.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- TIPS -->
+    <section id="tips" class="py-20 bg-stone-50">
+        <div class="max-w-4xl mx-auto px-6">
+            <h2 class="text-4xl tail font-bold text-center mb-12">Family Travel Tips</h2>
+            <div class="grid md:grid-cols-2 gap-8">
+                <div class="bg-white p-8 rounded-3xl">
+                    <div class="text-4xl mb-6">🍼</div>
+                    <h4 class="font-semibold mb-4">For the little ones</h4>
+                    <ul class="space-y-4">
+                        <li>Pack formula, diapers, and baby food — available in Big C supermarket Da Nang</li>
+                        <li>Most hotels provide cribs & baby bathtubs free</li>
+                        <li>Infants fly free on domestic legs</li>
+                    </ul>
+                </div>
+                <div class="bg-white p-8 rounded-3xl">
+                    <div class="text-4xl mb-6">🛡️</div>
+                    <h4 class="font-semibold mb-4">Practical stuff</h4>
+                    <ul class="space-y-4">
+                        <li>Apply for e-visa online (25 USD each, 3–5 days processing)</li>
+                        <li>Download Grab app for taxis (cheaper than airport taxis)</li>
+                        <li>Bring mosquito patches (not spray for baby)</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- GALLERY -->
+    <section class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-6">
+            <h2 class="text-4xl tail font-bold text-center mb-12">What You'll See</h2>
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+                <img src="https://picsum.photos/id/1015/600/600" class="rounded-3xl aspect-square object-cover">
+                <img src="https://picsum.photos/id/133/600/600" class="rounded-3xl aspect-square object-cover">
+                <img src="https://picsum.photos/id/201/600/600" class="rounded-3xl aspect-square object-cover">
+                <img src="https://picsum.photos/id/870/600/600" class="rounded-3xl aspect-square object-cover">
+            </div>
+        </div>
+    </section>
+
+    <!-- BOOK CTA -->
+    <section id="book" class="bg-gradient-to-br from-rose-600 to-rose-700 py-24 text-white">
+        <div class="max-w-4xl mx-auto text-center px-6">
+            <h2 class="text-5xl font-bold mb-6">Ready to book this trip?</h2>
+            <p class="text-xl opacity-90 mb-10">I can help refine dates, book hotels, or even arrange a private driver.</p>
+            <a href="mailto:your.email@gmail.com" 
+               class="inline-flex items-center gap-4 bg-white text-stone-900 px-12 py-6 rounded-3xl text-lg font-semibold hover:scale-105 transition-transform">
+                EMAIL ME TO START PLANNING
+                <span class="text-3xl">→</span>
+            </a>
+            <div class="mt-12 text-xs opacity-70">Made with love for your little family • February 2026</div>
+        </div>
+    </section>
+
+    <script>
+        function toggleDay(btn) {
+            const content = btn.parentElement.parentElement.querySelector('.day-content');
+            content.classList.toggle('hidden');
+            btn.textContent = content.classList.contains('hidden') ? '↓' : '↑';
+        }
+        
+        // Tailwind script already included
+    </script>
 </body>
 </html>
